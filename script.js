@@ -31,13 +31,6 @@ addButton.addEventListener('click', addTodo);
 // if any part of the todo list has been clicked, call 'deleteCheck' function
 todoList.addEventListener('click', deleteCheck);
 
-// if filter combo box has been clicked, call 'filterList' function
-// filterOption.addEventListener('click', filterList);
-
-
-// shows/hides completed tasks
-// showCompletedButton.addEventListener('click', toggleCompletedTasks);
-
 // changes text of button once clicked
 showCompletedButton.addEventListener("click", ()=>{
 
@@ -158,20 +151,6 @@ function filterList(e) {
     }
   });
 }
-
-// function toggleCompletedTasks(event) {
-//   const todos = todoList.childNodes; // get all todos in the list
-
-//   if(showCompletedButton.innerText === "Show Completed")
-//   {
-//     console.log('show completed was clicked');
-//   }
-//   else if (showCompletedButton.value === "Hide Completed")
-//   {
-//     console.log('hide completed was clicked');
-//   }
- 
-// }
 
 function showCompletedTasks()
 {
