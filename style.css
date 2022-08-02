@@ -1,0 +1,195 @@
+/* *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+} */
+
+/* style the main content (center coloumn) */
+body {
+    background-color:#faf0dc;
+    color: #472a28;
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+/* style the 'To Do List' header and the add task form */
+header, form { 
+    font-size: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* style the input text area and new task items */
+.todo-input, .todo-item {
+    color: #472a28;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid #472a28;
+    font-family: 'Poppins';
+    font-size: 25px;
+    direction: ltr;    
+    text-align: left;
+}
+
+/* make the spacing between form and first task item consistent with the rest of the task items */
+form {
+    margin-bottom: -20px;
+    margin-left: 170px;
+}
+
+/* style the placeholder text in input line */
+input[type="text"]::placeholder {
+    color: #472a287b;
+    text-align: left;
+}
+
+.add-button, .delete-button {
+    color: #472a28;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Poppins';
+    font-size: 35px;
+}
+
+#submit:disabled {
+    color: #472a287b;
+}
+
+/* changes cursor to be a pointer when user starts typing */
+#submit:enabled {
+    cursor:pointer;
+}
+
+/* style the task container div */
+.todo-container { 
+    display: flex;
+    /* text-align:center; */
+    justify-content: center;
+    align-items: center;
+    margin-left: 318px;
+    width: 700px;
+    /* position:relative;  */
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item {
+    display: inline-block;
+    width: 500px; 
+}
+
+.delete-button {
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.complete-button {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+ 
+.strike {
+    color: #472a287b;
+    text-decoration: line-through;
+    text-decoration-color: #472a28;
+    position: relative;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    /* border: none; */
+}
+
+ /* style the div class */
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.show-completed {
+    background:#faf0dc;
+    color: #472a28;
+    font-family: 'Poppins';
+    width: 140px;
+    cursor: pointer;
+    border: 1px solid #472a28;
+    padding: 10px;
+}
+
+.show-completed:hover {
+    color:#faf0dc;
+    background: #472a28;
+}
+
+.menu-icon {
+    /* background-color: #472a28; */
+    display: inline-block;
+    cursor: pointer;
+    position:absolute;
+    left: 30px;
+    top: 20px;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    background-color: #472a28;
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+  
+  /* The side navigation menu */
+.side-nav {
+    height: 90%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    bottom:0;
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .side-nav a {
+    padding: 4px 4px 4px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #6f4e37;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+}
